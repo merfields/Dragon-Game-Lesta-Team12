@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SpriteRenderer dragonSpriteRenderer;
     [SerializeField] private Sprite flexDragon;
 
+    [SerializeField] private GameObject finalScreen;
+    [SerializeField] private GameObject mainUi;
+
 
     private float spentGold = 0f;
 
@@ -92,6 +95,11 @@ public class GameManager : MonoBehaviour
         if (itemsBought == 5)
         {
             dragonSpriteRenderer.sprite = flexDragon;
+
+            //Показать победный экран
+            finalScreen.SetActive(true);
+            mainUi.SetActive(false);
+            Time.timeScale = 0;
         }
     }
 }
