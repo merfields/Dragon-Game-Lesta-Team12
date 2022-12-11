@@ -373,6 +373,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  dragonSpriteRenderer: {fileID: 690121965}
+  flexDragon: {fileID: 21300000, guid: c0f731b95da9308419cb6ff928b832a2, type: 3}
 --- !u!4 &139091756
 Transform:
   m_ObjectHideFlags: 0
@@ -2585,8 +2587,8 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Bones
-    audioClip: {fileID: 8300000, guid: 5a2b746deb396974e926b2e745822a86, type: 3}
-    volume: 0.3
+    audioClip: {fileID: 8300000, guid: 123ab23dd6470a9489900bccff92ad5d, type: 3}
+    volume: 0.572
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -2598,6 +2600,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Plastic
     audioClip: {fileID: 8300000, guid: 8a305070462ffdd48817c96775509843, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Coin
+    audioClip: {fileID: 8300000, guid: 99ee48d6b9f3e384ea5c29206ade3088, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0

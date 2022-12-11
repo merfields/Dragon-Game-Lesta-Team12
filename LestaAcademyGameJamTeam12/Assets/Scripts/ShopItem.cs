@@ -38,8 +38,10 @@ public class ShopItem : MonoBehaviour
 
             audioManager.PlayClip("Purchase");
             isPurchased = true;
+            
             gameManager.Score -= itemPrice;
             gameManager.AddToSpentGold(itemPrice);
+            gameManager.AddToItemsBought();
             heatController.ChangeDecreaseRate();
 
         }

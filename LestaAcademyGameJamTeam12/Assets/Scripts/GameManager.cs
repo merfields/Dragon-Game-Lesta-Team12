@@ -16,7 +16,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform chestPosition;
     [SerializeField] private AnimationCurve fallingTrajectory;
 
+    [SerializeField] private SpriteRenderer dragonSpriteRenderer;
+    [SerializeField] private Sprite flexDragon;
+
+
     private float spentGold = 0f;
+
+    private int itemsBought = 0;
     private float score;
     public float Score
     {
@@ -78,5 +84,14 @@ public class GameManager : MonoBehaviour
     {
         int randomNumber = Random.Range(0, items.Count);
         return items[randomNumber];
+    }
+
+    public void AddToItemsBought()
+    {
+        itemsBought++;
+        if (itemsBought == 5)
+        {
+            dragonSpriteRenderer.sprite = flexDragon;
+        }
     }
 }

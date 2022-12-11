@@ -116,4 +116,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClipName: Jewelry
   ps_Prefab: {fileID: 520313593770542933, guid: 55d88514e3a0b2a4cabb5094d8c7e28f, type: 3}
-  value: 3
+  value: 1000
