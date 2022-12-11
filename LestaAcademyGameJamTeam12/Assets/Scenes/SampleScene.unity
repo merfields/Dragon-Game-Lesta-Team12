@@ -242,7 +242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131888395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -3.94, z: 1}
+  m_LocalPosition: {x: 0.1, y: -3.94, z: 2}
   m_LocalScale: {x: 0.6894919, y: 0.6894919, z: 1.3789839}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2585,7 +2585,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Bones
-    audioClip: {fileID: 8300000, guid: d85d0cfd368d04d419af76f147d6c09d, type: 3}
+    audioClip: {fileID: 8300000, guid: 5a2b746deb396974e926b2e745822a86, type: 3}
     volume: 0.3
     pitch: 1
     loop: 0
