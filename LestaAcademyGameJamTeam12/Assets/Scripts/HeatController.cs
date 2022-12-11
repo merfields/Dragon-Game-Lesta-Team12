@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class HeatController : MonoBehaviour
 {
+    [SerializeField] private UIManager uIManager;
 
     [Header("Heat System")]
     [Range(0, 100)]
@@ -14,6 +15,8 @@ public class HeatController : MonoBehaviour
     [SerializeField] private Slider heatSlider;
     [SerializeField] private float itemBuffMultiplier = 0.1f;
     private float heatDecreaseBuffDelta;
+    private bool isLowHeatIndicatorWorking = false;
+    private Coroutine shopButtonCoroutine;
 
     private void Start()
     {
@@ -39,9 +42,22 @@ public class HeatController : MonoBehaviour
         heat -= heatDecreaseRate * Time.deltaTime;
         heatSlider.value = heat;
 
+        if (heat < 20 && !isLowHeatIndicatorWorking)
+        {
+            isLowHeatIndicatorWorking = true;
+            shopButtonCoroutine = StartCoroutine(uIManager.LowHeatIndicatorCoroutine());
+        }
+
+        if (heat > 20 && isLowHeatIndicatorWorking)
+        {
+            StopCoroutine(shopButtonCoroutine);
+            uIManager.ResetShopButton();
+            isLowHeatIndicatorWorking = false;
+        }
+
         if (heat <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(2);
         }
     }
 
