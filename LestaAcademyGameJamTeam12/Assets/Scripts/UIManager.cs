@@ -85,7 +85,6 @@ public class UIManager : MonoBehaviour
     //Для продолжения после окончания
     public void OnResumeGameButtonClicked()
     {
-        Time.timeScale = 1;
         finalScreen.SetActive(false);
         mainUi.SetActive(true);
     }

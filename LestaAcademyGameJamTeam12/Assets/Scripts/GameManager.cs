@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("Components")]
     [SerializeField] private UIManager uIManager;
     [SerializeField] private DifficultyManager difficultyManager;
+    [SerializeField] private AudioManager audioManager;
 
     [Header("Spawning Items")]
     [SerializeField] private List<GameObject> items;
@@ -44,8 +45,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-
+    private void Start()
+    {
+        audioManager.PlayClip("Main");
+    }
 
     public void AddToSpentGold(float itemPrice)
     {

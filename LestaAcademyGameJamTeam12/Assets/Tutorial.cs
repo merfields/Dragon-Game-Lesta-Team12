@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartingScreenUiManager : MonoBehaviour
+public class Tutorial : MonoBehaviour
 {
     public void OnStartGameButtonClicked()
     {
-        SceneManager.LoadScene(3);
+        Debug.Log("zdarova");
+        SceneManager.LoadScene(1);
     }
 }
