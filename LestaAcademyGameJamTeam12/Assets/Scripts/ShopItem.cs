@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ShopItem : MonoBehaviour
 {
-    [Header ("Components")]
+    [Header("Components")]
     [SerializeField] protected GameManager gameManager;
     [SerializeField] protected DifficultyManager difficultyManager;
     [SerializeField] protected AudioManager audioManager;
+    [SerializeField] private TextMeshProUGUI shopDescription;
 
 
     [SerializeField] private GameObject correspondingObjectOnScene;
@@ -17,6 +19,12 @@ public class ShopItem : MonoBehaviour
     [SerializeField] protected HeatController heatController;
 
     private bool isPurchased = false;
+
+    private void Start()
+    {
+        string price = " " + itemPrice;
+        shopDescription.text = shopDescription.text + price;
+    }
 
     public virtual void OnShopItemButtonClicked()
     {

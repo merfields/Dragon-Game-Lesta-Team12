@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FallingItem : MonoBehaviour
 {
-
     [SerializeField] private string audioClipName;
     private float duration = 1f;
     public float Duration
@@ -64,6 +64,7 @@ public class FallingItem : MonoBehaviour
             rotationSpeed = -rotationSpeed;
         }
     }
+    
 
     private void Update()
     {
