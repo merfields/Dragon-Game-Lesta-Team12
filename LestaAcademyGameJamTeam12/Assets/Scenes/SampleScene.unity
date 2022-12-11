@@ -1389,7 +1389,7 @@ MonoBehaviour:
   audioManager: {fileID: 1041075517}
   shopDescription: {fileID: 1994545842}
   correspondingObjectOnScene: {fileID: 0}
-  itemPrice: 30
+  itemPrice: 25
   heatController: {fileID: 289039395}
   providedHeat: 100
 --- !u!114 &462030666
