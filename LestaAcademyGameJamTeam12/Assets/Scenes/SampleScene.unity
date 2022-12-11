@@ -1259,7 +1259,7 @@ MonoBehaviour:
   audioManager: {fileID: 1041075517}
   shopDescription: {fileID: 948130342}
   correspondingObjectOnScene: {fileID: 1595099177}
-  itemPrice: 110
+  itemPrice: 70
   heatController: {fileID: 289039395}
 --- !u!1 &462030661
 GameObject:
@@ -1991,7 +1991,7 @@ MonoBehaviour:
   audioManager: {fileID: 1041075517}
   shopDescription: {fileID: 880323213}
   correspondingObjectOnScene: {fileID: 471535757}
-  itemPrice: 180
+  itemPrice: 150
   heatController: {fileID: 289039395}
 --- !u!114 &708375418
 MonoBehaviour:
@@ -2401,7 +2401,7 @@ MonoBehaviour:
   audioManager: {fileID: 1041075517}
   shopDescription: {fileID: 166483642}
   correspondingObjectOnScene: {fileID: 737431088}
-  itemPrice: 70
+  itemPrice: 90
   heatController: {fileID: 289039395}
 --- !u!1 &880323211
 GameObject:
@@ -2932,7 +2932,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: f3848d47990c3e646a1a2817fa0142a5, type: 3}
     volume: 0.056
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &1041075518
 Transform:
@@ -3390,7 +3390,7 @@ MonoBehaviour:
   audioManager: {fileID: 1041075517}
   shopDescription: {fileID: 1781399502}
   correspondingObjectOnScene: {fileID: 216984564}
-  itemPrice: 220
+  itemPrice: 120
   heatController: {fileID: 289039395}
 --- !u!1 &1315304568
 GameObject:
@@ -4051,7 +4051,7 @@ MonoBehaviour:
   audioManager: {fileID: 1041075517}
   shopDescription: {fileID: 2016516606}
   correspondingObjectOnScene: {fileID: 1865395387}
-  itemPrice: 300
+  itemPrice: 180
   heatController: {fileID: 289039395}
 --- !u!1 &1711115382
 GameObject:
