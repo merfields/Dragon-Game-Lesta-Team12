@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI highscoreText;
     [SerializeField] Button shopButton;
     [SerializeField] GameObject shopMenu;
+    [SerializeField] private GameObject mainUi;
+    [SerializeField] private GameObject finalScreen;
+
     [SerializeField] private string defaultText;
     [SerializeField] private Slider heatSlider;
 
@@ -76,5 +80,18 @@ public class UIManager : MonoBehaviour
     public void ResetShopButton()
     {
         shopButton.transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    //Для продолжения после окончания
+    public void OnResumeGameButtonClicked()
+    {
+        finalScreen.SetActive(false);
+        mainUi.SetActive(true);
+    }
+
+    public void OnStopPlayingButtonClicked()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
     }
 }

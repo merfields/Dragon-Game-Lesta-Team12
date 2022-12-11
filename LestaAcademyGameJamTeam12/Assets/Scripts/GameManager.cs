@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("Components")]
     [SerializeField] private UIManager uIManager;
     [SerializeField] private DifficultyManager difficultyManager;
+    [SerializeField] private AudioManager audioManager;
 
     [Header("Spawning Items")]
     [SerializeField] private List<GameObject> items;
@@ -18,6 +19,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private SpriteRenderer dragonSpriteRenderer;
     [SerializeField] private Sprite flexDragon;
+
+    [SerializeField] private GameObject finalScreen;
+    [SerializeField] private GameObject mainUi;
 
 
     private float spentGold = 0f;
@@ -41,8 +45,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-
+    private void Start()
+    {
+        audioManager.PlayClip("Main");
+    }
 
     public void AddToSpentGold(float itemPrice)
     {
@@ -92,6 +98,11 @@ public class GameManager : MonoBehaviour
         if (itemsBought == 5)
         {
             dragonSpriteRenderer.sprite = flexDragon;
+
+            //Показать победный экран
+            finalScreen.SetActive(true);
+            mainUi.SetActive(false);
+            Time.timeScale = 0;
         }
     }
 }
