@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         itemsBought++;
         if (itemsBought == 5)
         {
-            dragonSpriteRenderer.sprite = flexDragon;
+            //dragonSpriteRenderer.sprite = flexDragon;
 
             //Показать победный экран
             finalScreen.SetActive(true);
